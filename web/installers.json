@@ -1,0 +1,30 @@
+{
+  "name": "Inventario EDUmind",
+  "version": "0.2.0",
+  "files": [
+    {
+      "target": "macos-arm64",
+      "file": "Inventario-EDUmind-0.2.0-macos-arm64.dmg",
+      "bytes": 47412767,
+      "sha256": "58c6f489b616be83645e4bd35863e86be05a9ce286a3de75a39edc3b70524796"
+    },
+    {
+      "target": "macos-x64",
+      "file": "Inventario-EDUmind-0.2.0-macos-x64.dmg",
+      "bytes": 49130163,
+      "sha256": "b5512a89eae216e950c3f314482174593ea9b4813e4bc94fd494211a44a4a2bc"
+    },
+    {
+      "target": "linux-amd64",
+      "file": "inventario-edumind_0.2.0_amd64.deb",
+      "bytes": 47562232,
+      "sha256": "28e155d3b2c4c4917fc4e3f02430e171eb5297312abdd47c24341324cbc4f0ef"
+    },
+    {
+      "target": "linux-arm64",
+      "file": "inventario-edumind_0.2.0_arm64.deb",
+      "bytes": 47402880,
+      "sha256": "84994b1d7f72e8f7a8cb9cf40146e56a4b4a6a4ebd0dc76f0751900a410a9f7e"
+    }
+  ]
+}

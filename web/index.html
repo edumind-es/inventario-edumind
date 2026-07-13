@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Descargar Inventario EDUmind</title>
+<meta name="description" content="Inventario de recursos digitales para centros educativos. Local-first y privacy-first." />
+<style>
+  :root{--teal:#0f766e;--teal-d:#115e59;--ink:#0f172a;--muted:#475569;--cream:#faf8f4;--line:#e7e2d9}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--cream);color:var(--ink);font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;line-height:1.6}
+  .wrap{max-width:900px;margin:0 auto;padding:2rem 1.25rem 3rem}
+  header{text-align:center;padding:1rem 0 .5rem}
+  header img{width:132px;height:132px;object-fit:contain}
+  h1{font-size:2rem;margin:.4rem 0 .1rem}
+  .sub{color:var(--muted);margin:.1rem 0 0}
+  .ver{display:inline-block;margin-top:.5rem;font-size:.8rem;color:var(--muted);background:#fff;border:1px solid var(--line);border-radius:999px;padding:.15rem .7rem}
+  .hero{margin:1.6rem auto;max-width:560px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:1.4rem;text-align:center}
+  .hero .os{color:var(--muted);font-size:.9rem}
+  .btn{display:inline-block;margin-top:.6rem;background:var(--teal);color:#fff;text-decoration:none;padding:.8rem 1.6rem;border-radius:10px;font-weight:600;font-size:1.05rem}
+  .btn:hover{background:var(--teal-d)}
+  .alt{display:block;margin-top:.6rem;font-size:.85rem;color:var(--muted)}
+  .alt a{color:var(--teal)}
+  h2{font-size:1.25rem;margin:2rem 0 .8rem}
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem}
+  .card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:1.1rem}
+  .card h3{margin:.1rem 0 .5rem;font-size:1.05rem}
+  .card ol{margin:.3rem 0 0;padding-left:1.1rem}
+  .card li{margin:.25rem 0;font-size:.92rem}
+  .note{background:#fff;border:1px solid var(--line);border-radius:14px;padding:1.1rem 1.2rem;color:var(--muted);font-size:.95rem}
+  table{width:100%;border-collapse:collapse;margin-top:.8rem;background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;font-size:.88rem}
+  th,td{text-align:left;padding:.55rem .7rem;border-bottom:1px solid #f1efe9}
+  th{background:#fbfaf7;color:var(--muted);font-size:.72rem;text-transform:uppercase;letter-spacing:.03em}
+  td a{color:var(--teal);word-break:break-all}
+  .tag{font-size:.68rem;font-weight:700;padding:.1rem .45rem;border-radius:999px}
+  .tag.instalador{background:#dcfce7;color:#166534}
+  .tag.zip{background:#e2e8f0;color:#475569}
+  .h{font-family:ui-monospace,monospace;font-size:.7rem;color:#94a3b8}
+  code{background:#f1efe9;padding:.1rem .35rem;border-radius:4px;font-size:.85em}
+  footer{margin-top:2.5rem;text-align:center;color:var(--muted);font-size:.82rem}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <img src="logo.png" alt="Inventario EDUmind" />
+    <h1>Inventario EDUmind</h1>
+    <p class="sub">Inventario de recursos digitales para centros educativos · local-first y privacy-first.</p>
+    <span class="ver">Versión 0.2.0 · 2026-07-05</span>
+  </header>
+
+  <div class="hero" id="hero" hidden>
+    <div class="os">Tu sistema: <strong id="osname"></strong></div>
+    <a class="btn" id="dl" href="#" download>Descargar</a>
+    <a class="alt" id="altlink" href="#tabla">Ver todas las descargas ↓</a>
+  </div>
+
+  <h2>Cómo instalar (1 minuto)</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>🍎 macOS</h3>
+      <ol>
+        <li>Abre el <code>.dmg</code> y arrastra la app a <strong>Aplicaciones</strong>.</li>
+        <li>La 1ª vez: <strong>clic derecho → «Abrir»</strong> (app sin firmar).</li>
+        <li>Se abre el navegador con la app. Sin ventana de terminal.</li>
+      </ol>
+    </div>
+    <div class="card">
+      <h3>🪟 Windows</h3>
+      <ol>
+        <li>Ejecuta el <code>Setup.exe</code> (o descomprime el ZIP).</li>
+        <li>Si aparece SmartScreen: <strong>«Más información» → «Ejecutar de todas formas»</strong>.</li>
+        <li>Doble clic en el acceso directo «Inventario EDUmind».</li>
+      </ol>
+    </div>
+    <div class="card">
+      <h3>🐧 Linux · Abalar</h3>
+      <ol>
+        <li>Instala el <code>.deb</code>: <code>sudo dpkg -i inventario-edumind_*.deb</code></li>
+        <li>Ábrelo desde el <strong>menú de aplicaciones</strong> (queda con icono).</li>
+        <li>Alternativa: descomprime el ZIP y ejecuta <code>iniciar-inventario.sh</code>.</li>
+      </ol>
+    </div>
+  </div>
+
+  <h2>Primer arranque</h2>
+  <div class="note">
+    Al abrirlo por primera vez en un ordenador nuevo, la app pide crear la <strong>cuenta de
+    administración</strong> y el nombre del centro. A partir de ahí, los datos se guardan en ese
+    equipo y <strong>no se pierden al actualizar</strong>. Empieza en <strong>modo local</strong>
+    (solo ese ordenador); para usarlo desde móviles/tablets, entra como administrador y activa el
+    <strong>modo red</strong> en <em>Sistema</em> (te dará un código QR para conectarlos).
+  </div>
+
+  <h2>Móviles y tablets (iOS / Android)</h2>
+  <div class="note">
+    No necesitan descargar nada. Se conectan por la <strong>WiFi del centro</strong> al ordenador
+    servidor (modo red) abriendo su dirección en el navegador, y pueden instalarse con
+    <strong>«Añadir a pantalla de inicio»</strong> como si fueran una app, sin App Store ni Play Store.
+  </div>
+
+  <h2 id="tabla">Todas las descargas</h2>
+  <table>
+    <thead><tr><th>Sistema</th><th>Tipo</th><th>Archivo</th><th>Tamaño</th><th>SHA-256</th></tr></thead>
+    <tbody>
+<tr><td>macOS · Apple Silicon</td><td><span class="tag instalador">instalador</span></td><td><a href="Inventario-EDUmind-0.2.0-macos-arm64.dmg" download>Inventario-EDUmind-0.2.0-macos-arm64.dmg</a></td><td>45 MB</td><td class="h" title="58c6f489b616be83645e4bd35863e86be05a9ce286a3de75a39edc3b70524796">58c6f489b616be83…</td></tr>
+<tr><td>macOS · Intel</td><td><span class="tag instalador">instalador</span></td><td><a href="Inventario-EDUmind-0.2.0-macos-x64.dmg" download>Inventario-EDUmind-0.2.0-macos-x64.dmg</a></td><td>47 MB</td><td class="h" title="b5512a89eae216e950c3f314482174593ea9b4813e4bc94fd494211a44a4a2bc">b5512a89eae216e9…</td></tr>
+<tr><td>Linux · Abalar / Ubuntu / Debian</td><td><span class="tag instalador">instalador</span></td><td><a href="inventario-edumind_0.2.0_amd64.deb" download>inventario-edumind_0.2.0_amd64.deb</a></td><td>45 MB</td><td class="h" title="28e155d3b2c4c4917fc4e3f02430e171eb5297312abdd47c24341324cbc4f0ef">28e155d3b2c4c491…</td></tr>
+<tr><td>Linux · ARM</td><td><span class="tag instalador">instalador</span></td><td><a href="inventario-edumind_0.2.0_arm64.deb" download>inventario-edumind_0.2.0_arm64.deb</a></td><td>45 MB</td><td class="h" title="84994b1d7f72e8f7a8cb9cf40146e56a4b4a6a4ebd0dc76f0751900a410a9f7e">84994b1d7f72e8f7…</td></tr>
+<tr><td>Windows</td><td><span class="tag zip">zip</span></td><td><a href="inventario-edumind-windows-x64.zip" download>inventario-edumind-windows-x64.zip</a></td><td>35 MB</td><td class="h" title="22ff260bd432277d9cc0e0accb5f359e3ef931d44c0148b44ce5fb3582a9f0a9">22ff260bd432277d…</td></tr>
+<tr><td>macOS · Apple Silicon</td><td><span class="tag zip">zip</span></td><td><a href="inventario-edumind-macos-arm64.zip" download>inventario-edumind-macos-arm64.zip</a></td><td>39 MB</td><td class="h" title="d23c2e8e08f18f0da36314115a37d1d0363265b84c920d3bd4194cf7e18bd156">d23c2e8e08f18f0d…</td></tr>
+<tr><td>macOS · Intel</td><td><span class="tag zip">zip</span></td><td><a href="inventario-edumind-macos-x64.zip" download>inventario-edumind-macos-x64.zip</a></td><td>40 MB</td><td class="h" title="fc5855c7b77dba14539f8a6428c71c475a4c72541b2554910b2e1a0cffda16b8">fc5855c7b77dba14…</td></tr>
+<tr><td>Linux · Abalar / Ubuntu / Debian</td><td><span class="tag zip">zip</span></td><td><a href="inventario-edumind-linux-x64.zip" download>inventario-edumind-linux-x64.zip</a></td><td>45 MB</td><td class="h" title="67af0228eb285b2fb866465a1eb57df77faac9c0fb89ab9868500f7762206d35">67af0228eb285b2f…</td></tr>
+<tr><td>Linux · ARM</td><td><span class="tag zip">zip</span></td><td><a href="inventario-edumind-linux-arm64.zip" download>inventario-edumind-linux-arm64.zip</a></td><td>45 MB</td><td class="h" title="f16815f0191701ac5ee5f98c09e08e962d0a8faac5930d8d85eca2314dfec797">f16815f0191701ac…</td></tr>
+    </tbody>
+  </table>
+
+  <footer>
+    Los datos <strong>nunca salen del centro</strong>. Verifica la integridad con los códigos SHA-256
+    (también en <a href="SHA256SUMS.txt">SHA256SUMS.txt</a>). Inventario EDUmind.
+    <br />
+    © 2026 EDUmind · Software libre bajo licencia
+    <a href="LICENSE">AGPL-3.0</a> ·
+    <a href="NOTICE">código fuente y avisos</a> ·
+    <a href="https://edumind.es/es/legal/privacidad">política de privacidad (RGPD)</a>
+  </footer>
+</div>
+<script>
+  var DL = {"mac-arm64":{"installer":"Inventario-EDUmind-0.2.0-macos-arm64.dmg","zip":"inventario-edumind-macos-arm64.zip"},"mac-x64":{"installer":"Inventario-EDUmind-0.2.0-macos-x64.dmg","zip":"inventario-edumind-macos-x64.zip"},"win":{"installer":null,"zip":"inventario-edumind-windows-x64.zip"},"linux":{"installer":"inventario-edumind_0.2.0_amd64.deb","zip":"inventario-edumind-linux-x64.zip"}};
+  (function(){
+    var ua=navigator.userAgent, p=navigator.platform||'', key=null, name='';
+    if(/Win/i.test(ua)||/Win/i.test(p)){key='win';name='Windows';}
+    else if(/Mac/i.test(p)||/Mac OS X/i.test(ua)){
+      var arm=/ARM|Apple/i.test(ua)||navigator.maxTouchPoints>1;
+      key=arm?'mac-arm64':'mac-x64';name='macOS';
+    } else if(/Linux|X11|Android/i.test(ua)){key='linux';name='Linux';}
+    if(!key||!DL[key]) return;
+    var f=DL[key].installer||DL[key].zip; if(!f) return;
+    document.getElementById('osname').textContent=name;
+    var b=document.getElementById('dl'); b.href=f;
+    b.textContent='Descargar para '+name+(DL[key].installer?' (instalador)':' (ZIP)');
+    document.getElementById('hero').hidden=false;
+  })();
+</script>
+  <script>
+    // Reescribe los enlaces de descarga hacia los assets de la GitHub Release.
+    (function () {
+      var BASE = 'https://github.com/edumind-es/inventario-edumind/releases/download/v0.2.0/';
+      document.querySelectorAll('a[download]').forEach(function (a) {
+        var href = a.getAttribute('href');
+        if (href && !/^https?:/i.test(href)) a.setAttribute('href', BASE + href);
+      });
+    })();
+  </script>
+</body>
+</html>

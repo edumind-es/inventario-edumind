@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Descargar Inventario EDUmind</title>
+<style>
+  :root { --teal:#0f766e; --ink:#0f172a; --muted:#475569; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:#faf8f4; color:var(--ink); font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif; line-height:1.6; }
+  .wrap { max-width:860px; margin:0 auto; padding:2.5rem 1.25rem; }
+  h1 { font-size:1.8rem; margin:.2rem 0; }
+  .sub { color:var(--muted); margin-top:0; }
+  .pick { margin:1.5rem 0; padding:1.25rem; border:1px solid #e2e8f0; border-radius:12px; background:#fff; }
+  .pick a.btn { display:inline-block; margin-top:.5rem; background:var(--teal); color:#fff; text-decoration:none; padding:.7rem 1.2rem; border-radius:8px; font-weight:600; }
+  table { width:100%; border-collapse:collapse; margin-top:1rem; font-size:.9rem; background:#fff; border:1px solid #e2e8f0; border-radius:12px; overflow:hidden; }
+  th,td { text-align:left; padding:.6rem .8rem; border-bottom:1px solid #f1f5f9; }
+  th { background:#f8fafc; color:var(--muted); font-size:.75rem; text-transform:uppercase; letter-spacing:.03em; }
+  .hash { font-family:ui-monospace,monospace; font-size:.7rem; color:#94a3b8; word-break:break-all; }
+  a { color:var(--teal); }
+  .note { color:var(--muted); font-size:.85rem; margin-top:1.5rem; }
+  code { background:#f1f5f9; padding:.1rem .35rem; border-radius:4px; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Inventario EDUmind</h1>
+    <p class="sub">Versión 0.2.0 · 2026-07-05 · descarga para tu sistema, descomprime y haz doble clic. No hace falta instalar nada.</p>
+
+    <div class="pick" id="pick" hidden>
+      <strong>Tu sistema:</strong> <span id="os"></span>
+      <br /><a class="btn" id="dl" href="#" download>Descargar</a>
+    </div>
+
+    <table>
+      <thead><tr><th>Sistema</th><th>Archivo</th><th>Tamaño</th><th>SHA-256</th></tr></thead>
+      <tbody>
+      <tr>
+        <td>Windows</td>
+        <td><a href="inventario-edumind-windows-x64.zip" download>inventario-edumind-windows-x64.zip</a></td>
+        <td>35 MB</td>
+        <td class="hash">22ff260bd432277d9cc0e0accb5f359e3ef931d44c0148b44ce5fb3582a9f0a9</td>
+      </tr>
+      <tr>
+        <td>macOS (Apple Silicon)</td>
+        <td><a href="inventario-edumind-macos-arm64.zip" download>inventario-edumind-macos-arm64.zip</a></td>
+        <td>39 MB</td>
+        <td class="hash">d23c2e8e08f18f0da36314115a37d1d0363265b84c920d3bd4194cf7e18bd156</td>
+      </tr>
+      <tr>
+        <td>macOS (Intel)</td>
+        <td><a href="inventario-edumind-macos-x64.zip" download>inventario-edumind-macos-x64.zip</a></td>
+        <td>40 MB</td>
+        <td class="hash">fc5855c7b77dba14539f8a6428c71c475a4c72541b2554910b2e1a0cffda16b8</td>
+      </tr>
+      <tr>
+        <td>Linux · Abalar / Ubuntu / Debian</td>
+        <td><a href="inventario-edumind-linux-x64.zip" download>inventario-edumind-linux-x64.zip</a></td>
+        <td>45 MB</td>
+        <td class="hash">67af0228eb285b2fb866465a1eb57df77faac9c0fb89ab9868500f7762206d35</td>
+      </tr>
+      <tr>
+        <td>Linux ARM (Raspberry Pi…)</td>
+        <td><a href="inventario-edumind-linux-arm64.zip" download>inventario-edumind-linux-arm64.zip</a></td>
+        <td>45 MB</td>
+        <td class="hash">f16815f0191701ac5ee5f98c09e08e962d0a8faac5930d8d85eca2314dfec797</td>
+      </tr>
+      </tbody>
+    </table>
+
+    <p class="note">
+      Los teléfonos y tablets (iOS/Android) no necesitan descarga: se conectan por el navegador
+      al ordenador servidor del centro (modo red) y pueden instalarse con «Añadir a pantalla de inicio».
+      Para verificar la integridad: los códigos SHA-256 están también en <code>SHA256SUMS.txt</code>.
+    </p>
+    <p class="note">
+      © 2026 EDUmind · Software libre bajo licencia <a href="LICENSE">AGPL-3.0</a> ·
+      <a href="NOTICE">código fuente y avisos</a> ·
+      <a href="https://edumind.es/es/legal/privacidad">política de privacidad (RGPD)</a>
+    </p>
+  </div>
+  <script>
+    (function () {
+      var ua = navigator.userAgent, p = navigator.platform || '', pick = null, label = '';
+      if (/Win/i.test(ua) || /Win/i.test(p)) { pick = 'windows-x64'; label = 'Windows'; }
+      else if (/Mac/i.test(p) || /Mac OS X/i.test(ua)) {
+        var arm = /ARM|Apple/i.test(ua) || (navigator.maxTouchPoints > 1);
+        pick = arm ? 'macos-arm64' : 'macos-x64'; label = 'macOS';
+      } else if (/Linux|X11/i.test(ua)) { pick = 'linux-x64'; label = 'Linux'; }
+      if (pick) {
+        document.getElementById('os').textContent = label;
+        document.getElementById('dl').href = 'inventario-edumind-' + pick + '.zip';
+        document.getElementById('pick').hidden = false;
+      }
+    })();
+  </script>
+  <script>
+    // Reescribe los enlaces de descarga hacia los assets de la GitHub Release.
+    (function () {
+      var BASE = 'https://github.com/edumind-es/inventario-edumind/releases/download/v0.2.0/';
+      document.querySelectorAll('a[download]').forEach(function (a) {
+        var href = a.getAttribute('href');
+        if (href && !/^https?:/i.test(href)) a.setAttribute('href', BASE + href);
+      });
+    })();
+  </script>
+</body>
+</html>

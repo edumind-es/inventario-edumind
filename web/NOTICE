@@ -1,0 +1,47 @@
+EDUmind - Inventario-EDUmind
+Copyright (C) 2024-2025 EDUmind - Los Mundos Edufis
+
+Este programa es software libre: puede redistribuirlo y/o modificarlo
+bajo los términos de la Licencia Pública General Affero de GNU publicada
+por la Free Software Foundation, ya sea la versión 3 de la Licencia, o
+(a su elección) cualquier versión posterior.
+
+Este programa se distribuye con la esperanza de que sea útil,
+pero SIN NINGUNA GARANTÍA; sin siquiera la garantía implícita de
+COMERCIABILIDAD o IDONEIDAD PARA UN PROPÓSITO PARTICULAR. Consulte la
+Licencia Pública General Affero de GNU para obtener más detalles.
+
+Debería haber recibido una copia de la Licencia Pública General Affero de GNU
+junto con este programa. Si no es así, consulte <https://www.gnu.org/licenses/>.
+
+---
+
+REGISTRO DE PROPIEDAD INTELECTUAL:
+Safe Creative Code: PENDIENTE_REGISTRO
+Fecha de Registro: 2026-07-06
+Certificado: /legal/registros/safe_creative/PENDIENTE_REGISTRO.pdf
+Entidad Titular: EDUmind (Los Mundos Edufis)
+
+VERIFICACIÓN DE AUTENTICIDAD:
+El software oficial de EDUmind siempre está firmado.
+Verifique la firma GPG y los checksums antes de instalar.
+GPG Signature: releases@edumind.es
+
+---
+
+DISPONIBILIDAD DEL CÓDIGO FUENTE (AGPL-3.0):
+Este programa incluye un componente de servidor accesible en red local
+("modo red"). Conforme al Art. 13 de la AGPL-3.0, cualquier usuario que
+interactúe con dicho componente en red tiene derecho a obtener el código
+fuente completo correspondiente a esta versión (0.2.0).
+Solicítelo por escrito a: legal@edumind.es
+Se entregará sin coste adicional, en un plazo razonable.
+
+---
+
+PROTECCIÓN DE DATOS (RGPD / UE):
+Inventario EDUmind es local-first: los datos del inventario se almacenan
+en el propio equipo/servidor del centro educativo y no se transmiten a
+terceros ni a EDUmind. No se realiza tratamiento de datos personales por
+parte de EDUmind como consecuencia del uso de esta aplicación.
+Política de privacidad general de EDUmind: https://edumind.es/es/legal/privacidad

@@ -1,0 +1,45 @@
+# === Binarios e instaladores (van a GitHub Releases, NUNCA al git) ===
+*.zip
+*.deb
+*.dmg
+*.exe
+*.AppImage
+*.msi
+*.pkg
+*.tar.gz
+node.exe
+
+# === Dependencias y build ===
+node_modules/
+dist/
+build/
+.svelte-kit/
+.vite/
+out/
+
+# === Datos, base de datos y backups (local-first: nunca compartir) ===
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite-*
+*.sql
+*.sql.gz
+_backups/
+backups/
+backup/
+uploads/
+data/
+
+# === Secretos ===
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# === Editor / OS ===
+.DS_Store
+.idea/
+.vscode/
+Thumbs.db

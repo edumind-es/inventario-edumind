@@ -52,9 +52,8 @@ red** en *Sistema*.
 Distribuido bajo **GNU AGPL-3.0** — ver [LICENSE](LICENSE), [NOTICE](NOTICE),
 [AUTHORS](AUTHORS) y [COPYRIGHT](COPYRIGHT).
 
-El código es libre; la marca **EDUmind** y **Los Mundos Edufis** son propiedad de sus
-respectivos titulares.
+El código es libre; la marca **EDUmind®** es propiedad de Luis Vilela Acuña y no se cede con el código.
 
 > **Nota sobre el código fuente:** conforme al Art. 13 de la AGPL-3.0, este repositorio
 > publica la aplicación y su distribución. El código fuente completo correspondiente a la
-> versión de red se ofrece a cualquier usuario que lo solicite en `legal@edumind.es`.
+> versión de red se ofrece a cualquier usuario que lo solicite en `contacto@edumind.es`.

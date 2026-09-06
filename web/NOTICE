@@ -1,5 +1,5 @@
 EDUmind - Inventario-EDUmind
-Copyright (C) 2024-2025 EDUmind - Los Mundos Edufis
+Copyright (C) 2024-2026 Luis Vilela Acuña <contacto@edumind.es>
 
 Este programa es software libre: puede redistribuirlo y/o modificarlo
 bajo los términos de la Licencia Pública General Affero de GNU publicada
@@ -20,7 +20,7 @@ REGISTRO DE PROPIEDAD INTELECTUAL:
 Safe Creative Code: PENDIENTE_REGISTRO
 Fecha de Registro: 2026-07-06
 Certificado: /legal/registros/safe_creative/PENDIENTE_REGISTRO.pdf
-Entidad Titular: EDUmind (Los Mundos Edufis)
+Titular: Luis Vilela Acuña <contacto@edumind.es>
 
 VERIFICACIÓN DE AUTENTICIDAD:
 El software oficial de EDUmind siempre está firmado.
@@ -34,7 +34,7 @@ Este programa incluye un componente de servidor accesible en red local
 ("modo red"). Conforme al Art. 13 de la AGPL-3.0, cualquier usuario que
 interactúe con dicho componente en red tiene derecho a obtener el código
 fuente completo correspondiente a esta versión (0.2.0).
-Solicítelo por escrito a: legal@edumind.es
+Solicítelo por escrito a: contacto@edumind.es
 Se entregará sin coste adicional, en un plazo razonable.
 
 ---

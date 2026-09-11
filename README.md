@@ -4,7 +4,7 @@
 los datos se guardan en el propio equipo del centro y **nunca salen de allí**. Sin cuentas en
 la nube, sin servicios online, sin App Store ni Play Store.
 
-> Versión actual: **0.2.0** · Software libre bajo licencia [AGPL-3.0](LICENSE)
+> Versión actual: **0.2.1** · Software libre bajo licencia [AGPL-3.0](LICENSE)
 
 ---
 

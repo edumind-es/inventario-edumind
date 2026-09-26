@@ -1,14 +1,14 @@
 {
   "name": "Inventario EDUmind",
-  "version": "0.2.0",
-  "date": "2026-07-05",
+  "version": "0.2.1",
+  "date": "2026-09-11",
   "node": "v22.23.1",
   "files": [
     {
       "target": "windows-x64",
       "file": "inventario-edumind-windows-x64.zip",
-      "bytes": 36711116,
-      "sha256": "22ff260bd432277d9cc0e0accb5f359e3ef931d44c0148b44ce5fb3582a9f0a9"
+      "bytes": 36711802,
+      "sha256": "bd48df11b096c427c8e9beba54aaed45a148e1dae6270adc715ceaef6d1f3061"
     },
     {
       "target": "macos-arm64",

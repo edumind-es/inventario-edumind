@@ -13,10 +13,11 @@
   .sub { color:var(--muted); margin-top:0; }
   .pick { margin:1.5rem 0; padding:1.25rem; border:1px solid #e2e8f0; border-radius:12px; background:#fff; }
   .pick a.btn { display:inline-block; margin-top:.5rem; background:var(--teal); color:#fff; text-decoration:none; padding:.7rem 1.2rem; border-radius:8px; font-weight:600; }
-  table { width:100%; border-collapse:collapse; margin-top:1rem; font-size:.9rem; background:#fff; border:1px solid #e2e8f0; border-radius:12px; overflow:hidden; }
+  table { width:100%; border-collapse:collapse; font-size:.9rem; background:#fff; border:1px solid #e2e8f0; border-radius:12px; overflow:hidden; }
   th,td { text-align:left; padding:.6rem .8rem; border-bottom:1px solid #f1f5f9; }
   th { background:#f8fafc; color:var(--muted); font-size:.75rem; text-transform:uppercase; letter-spacing:.03em; }
-  .hash { font-family:ui-monospace,monospace; font-size:.7rem; color:#94a3b8; word-break:break-all; }
+  .hash { font-family:ui-monospace,monospace; font-size:.7rem; color:#64748b; word-break:break-all; }
+  .tabla-scroll { margin-top:1rem; overflow-x:auto; -webkit-overflow-scrolling:touch; }
   a { color:var(--teal); }
   .note { color:var(--muted); font-size:.85rem; margin-top:1.5rem; }
   code { background:#f1f5f9; padding:.1rem .35rem; border-radius:4px; }
@@ -24,14 +25,18 @@
 </head>
 <body>
   <div class="wrap">
+    <header>
     <h1>Inventario EDUmind</h1>
     <p class="sub">Versión 0.2.1 · 2026-09-11 · descarga para tu sistema, descomprime y haz doble clic. No hace falta instalar nada.</p>
+    </header>
 
+    <main>
     <div class="pick" id="pick" hidden>
       <strong>Tu sistema:</strong> <span id="os"></span>
       <br /><a class="btn" id="dl" href="#" download>Descargar</a>
     </div>
 
+    <div class="tabla-scroll">
     <table>
       <thead><tr><th>Sistema</th><th>Archivo</th><th>Tamaño</th><th>SHA-256</th></tr></thead>
       <tbody>
@@ -67,17 +72,28 @@
       </tr>
       </tbody>
     </table>
+    </div>
+    </main>
 
+    <footer>
     <p class="note">
       Los teléfonos y tablets (iOS/Android) no necesitan descarga: se conectan por el navegador
       al ordenador servidor del centro (modo red) y pueden instalarse con «Añadir a pantalla de inicio».
       Para verificar la integridad: los códigos SHA-256 están también en <code>SHA256SUMS.txt</code>.
     </p>
     <p class="note">
-      © 2026 EDUmind · Software libre bajo licencia <a href="LICENSE">AGPL-3.0</a> ·
-      <a href="NOTICE">código fuente y avisos</a> ·
+      © 2024-2026 <strong>Luis Vilela Acuña</strong> · EDUmind® · Software libre bajo doble licencia
+      <a href="LICENSE-AGPL-3.0-or-later.txt">AGPL-3.0-or-later</a> /
+      <a href="LICENSE-EUPL-1.2.txt">EUPL-1.2</a> (<a href="LICENSE">resumen</a>) ·
+      <a href="NOTICE">avisos y código fuente</a> ·
+      <a href="CREDITS.md">créditos de terceros</a> ·
+      <a href="https://github.com/edumind-es/inventario-edumind">repositorio en GitHub</a> ·
       <a href="https://edumind.es/es/legal/privacidad">política de privacidad (RGPD)</a>
+      <br />
+      Desarrollado con asistencia de IA (vibe coding) bajo revisión del autor ·
+      <a href="https://edumind.es/es/legal/ia">política de IA de EDUmind</a>
     </p>
+    </footer>
   </div>
   <script>
     (function () {

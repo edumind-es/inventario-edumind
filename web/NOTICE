@@ -1,41 +1,47 @@
-EDUmind - Inventario-EDUmind
+Inventario EDUmind
 Copyright (C) 2024-2026 Luis Vilela Acuña <contacto@edumind.es>
 
-Este programa es software libre: puede redistribuirlo y/o modificarlo
-bajo los términos de la Licencia Pública General Affero de GNU publicada
-por la Free Software Foundation, ya sea la versión 3 de la Licencia, o
-(a su elección) cualquier versión posterior.
+Este programa es software libre bajo doble licencia, a elección de quien lo recibe:
 
-Este programa se distribuye con la esperanza de que sea útil,
-pero SIN NINGUNA GARANTÍA; sin siquiera la garantía implícita de
-COMERCIABILIDAD o IDONEIDAD PARA UN PROPÓSITO PARTICULAR. Consulte la
-Licencia Pública General Affero de GNU para obtener más detalles.
+  - GNU Affero General Public License v3.0 o posterior (AGPL-3.0-or-later)
+  - European Union Public Licence v1.2 (EUPL-1.2)
 
-Debería haber recibido una copia de la Licencia Pública General Affero de GNU
-junto con este programa. Si no es así, consulte <https://www.gnu.org/licenses/>.
+SPDX-License-Identifier: AGPL-3.0-or-later OR EUPL-1.2
+Textos completos: LICENSE-AGPL-3.0-or-later.txt y LICENSE-EUPL-1.2.txt (resumen en LICENSE).
 
----
-
-REGISTRO DE PROPIEDAD INTELECTUAL:
-Safe Creative Code: PENDIENTE_REGISTRO
-Fecha de Registro: 2026-07-06
-Certificado: /legal/registros/safe_creative/PENDIENTE_REGISTRO.pdf
-Titular: Luis Vilela Acuña <contacto@edumind.es>
-
-VERIFICACIÓN DE AUTENTICIDAD:
-El software oficial de EDUmind siempre está firmado.
-Verifique la firma GPG y los checksums antes de instalar.
-GPG Signature: releases@edumind.es
+Este programa se distribuye con la esperanza de que sea útil, pero SIN NINGUNA
+GARANTÍA; sin siquiera la garantía implícita de COMERCIABILIDAD o IDONEIDAD
+PARA UN PROPÓSITO PARTICULAR. Consulte las licencias para más detalles.
 
 ---
 
-DISPONIBILIDAD DEL CÓDIGO FUENTE (AGPL-3.0):
+MARCA:
+EDUmind® es marca registrada propiedad de Luis Vilela Acuña y no se cede con
+el código (ver TRADEMARKS.md).
+
+---
+
+VERIFICACIÓN DE INTEGRIDAD:
+Cada publicación incluye los códigos SHA-256 de todos los paquetes en
+SHA256SUMS.txt (también en web/version.json y web/installers.json).
+Compruébelos antes de instalar. No se publican firmas GPG.
+
+---
+
+DISPONIBILIDAD DEL CÓDIGO FUENTE (AGPL-3.0, Art. 13):
 Este programa incluye un componente de servidor accesible en red local
-("modo red"). Conforme al Art. 13 de la AGPL-3.0, cualquier usuario que
-interactúe con dicho componente en red tiene derecho a obtener el código
-fuente completo correspondiente a esta versión (0.2.0).
-Solicítelo por escrito a: contacto@edumind.es
-Se entregará sin coste adicional, en un plazo razonable.
+("modo red"). Cualquier usuario que interactúe con dicho componente en red
+tiene derecho a obtener el código fuente completo correspondiente a la
+versión distribuida (ver web/version.json). Este repositorio contiene hoy la
+web de descargas y la documentación; el código fuente de la aplicación se
+entrega sin coste y en un plazo razonable a quien lo solicite por escrito a
+contacto@edumind.es, mientras no esté publicado en el propio repositorio.
+
+---
+
+MATERIAL DE TERCEROS:
+Ver CREDITS.md (Node.js, Svelte, SvelteKit, Tailwind CSS, ZXing, pdf-lib,
+qrcode, papaparse, node-forge, selfsigned y sus licencias).
 
 ---
 
@@ -44,4 +50,4 @@ Inventario EDUmind es local-first: los datos del inventario se almacenan
 en el propio equipo/servidor del centro educativo y no se transmiten a
 terceros ni a EDUmind. No se realiza tratamiento de datos personales por
 parte de EDUmind como consecuencia del uso de esta aplicación.
-Política de privacidad general de EDUmind: https://edumind.es/es/legal/privacidad
+Detalle: PRIVACIDAD.md. Política general: https://edumind.es/es/legal/privacidad

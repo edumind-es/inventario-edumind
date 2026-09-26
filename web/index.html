@@ -28,16 +28,18 @@
   .card ol{margin:.3rem 0 0;padding-left:1.1rem}
   .card li{margin:.25rem 0;font-size:.92rem}
   .note{background:#fff;border:1px solid var(--line);border-radius:14px;padding:1.1rem 1.2rem;color:var(--muted);font-size:.95rem}
-  table{width:100%;border-collapse:collapse;margin-top:.8rem;background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;font-size:.88rem}
+  .tabla-scroll{margin-top:.8rem;overflow-x:auto;-webkit-overflow-scrolling:touch}
+  table{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;font-size:.88rem}
   th,td{text-align:left;padding:.55rem .7rem;border-bottom:1px solid #f1efe9}
   th{background:#fbfaf7;color:var(--muted);font-size:.72rem;text-transform:uppercase;letter-spacing:.03em}
   td a{color:var(--teal);word-break:break-all}
   .tag{font-size:.68rem;font-weight:700;padding:.1rem .45rem;border-radius:999px}
   .tag.instalador{background:#dcfce7;color:#166534}
   .tag.zip{background:#e2e8f0;color:#475569}
-  .h{font-family:ui-monospace,monospace;font-size:.7rem;color:#94a3b8}
+  .h{font-family:ui-monospace,monospace;font-size:.7rem;color:#64748b}
   code{background:#f1efe9;padding:.1rem .35rem;border-radius:4px;font-size:.85em}
   footer{margin-top:2.5rem;text-align:center;color:var(--muted);font-size:.82rem}
+  footer a{color:var(--teal)}
 </style>
 </head>
 <body>
@@ -49,6 +51,7 @@
     <span class="ver">Versión 0.2.1 · 2026-09-11</span>
   </header>
 
+  <main>
   <div class="hero" id="hero" hidden>
     <div class="os">Tu sistema: <strong id="osname"></strong></div>
     <a class="btn" id="dl" href="#" download>Descargar</a>
@@ -68,9 +71,9 @@
     <div class="card">
       <h3>🪟 Windows</h3>
       <ol>
-        <li>Ejecuta el <code>Setup.exe</code> (o descomprime el ZIP).</li>
+        <li>Descomprime el ZIP <strong>completo</strong> («Extraer todo») en una carpeta normal, p. ej. Documentos.</li>
+        <li>Doble clic en <code>Iniciar Inventario.vbs</code> dentro de la carpeta extraída.</li>
         <li>Si aparece SmartScreen: <strong>«Más información» → «Ejecutar de todas formas»</strong>.</li>
-        <li>Doble clic en el acceso directo «Inventario EDUmind».</li>
       </ol>
     </div>
     <div class="card">
@@ -100,6 +103,7 @@
   </div>
 
   <h2 id="tabla">Todas las descargas</h2>
+  <div class="tabla-scroll">
   <table>
     <thead><tr><th>Sistema</th><th>Tipo</th><th>Archivo</th><th>Tamaño</th><th>SHA-256</th></tr></thead>
     <tbody>
@@ -114,15 +118,29 @@
 <tr><td>Linux · ARM</td><td><span class="tag zip">zip</span></td><td><a href="inventario-edumind-linux-arm64.zip" download>inventario-edumind-linux-arm64.zip</a></td><td>45 MB</td><td class="h" title="f16815f0191701ac5ee5f98c09e08e962d0a8faac5930d8d85eca2314dfec797">f16815f0191701ac…</td></tr>
     </tbody>
   </table>
+  </div>
+  <p class="note" style="margin-top:.8rem">
+    Los <code>.dmg</code> y <code>.deb</code> conservan el nombre <strong>0.2.0</strong>: son exactamente las
+    mismas compilaciones de la versión 0.2.0 (la 0.2.1 solo cambió el ZIP de Windows). Verifica cada
+    descarga con su SHA-256 antes de instalar. No se publican firmas GPG.
+  </p>
+  </main>
 
   <footer>
     Los datos <strong>nunca salen del centro</strong>. Verifica la integridad con los códigos SHA-256
     (también en <a href="SHA256SUMS.txt">SHA256SUMS.txt</a>). Inventario EDUmind.
     <br />
-    © 2026 EDUmind · Software libre bajo licencia
-    <a href="LICENSE">AGPL-3.0</a> ·
-    <a href="NOTICE">código fuente y avisos</a> ·
+    © 2024-2026 <strong>Luis Vilela Acuña</strong> · EDUmind® · Software libre bajo doble licencia
+    <a href="LICENSE-AGPL-3.0-or-later.txt">AGPL-3.0-or-later</a> /
+    <a href="LICENSE-EUPL-1.2.txt">EUPL-1.2</a>
+    (<a href="LICENSE">resumen</a>) ·
+    <a href="NOTICE">avisos y código fuente</a> ·
+    <a href="CREDITS.md">créditos de terceros</a> ·
+    <a href="https://github.com/edumind-es/inventario-edumind">repositorio en GitHub</a> ·
     <a href="https://edumind.es/es/legal/privacidad">política de privacidad (RGPD)</a>
+    <br />
+    Desarrollado con asistencia de IA (vibe coding) bajo revisión del autor ·
+    <a href="https://edumind.es/es/legal/ia">política de IA de EDUmind</a>
   </footer>
 </div>
 <script>

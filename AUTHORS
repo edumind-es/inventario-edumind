@@ -1,21 +1,22 @@
-EDUmind - Inventario-EDUmind
-===================================
+Inventario EDUmind
+==================
 
-AUTORES PRINCIPALES:
+AUTOR:
 
 Luis Vilela Acuña <contacto@edumind.es>
   - Concepción original y arquitectura
-  - Desarrollo principal
+  - Desarrollo principal (vibe coding con asistencia de IA, ver README.md)
   - Diseño y UX
 
 CONTRIBUIDORES:
 
-[Lista de contribuidores]
+Ninguno por ahora. Las contribuciones se aceptan por pull request.
 
 ---
 
 NOTA LEGAL:
-Todos los contribuidores aceptan que sus aportaciones se licencien
-bajo GNU AGPL v3.0 y que EDUmind mantenga la gestión del proyecto.
+Quien contribuya acepta que sus aportaciones se licencien bajo la misma
+doble licencia del proyecto (AGPL-3.0-or-later OR EUPL-1.2) y que
+Luis Vilela Acuña mantenga la gestión del proyecto.
 El código es libre; la marca EDUmind® es propiedad de Luis Vilela Acuña
 y no se cede con el código (ver TRADEMARKS.md).

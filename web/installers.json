@@ -1,18 +1,18 @@
 {
   "name": "Inventario EDUmind",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "files": [
     {
       "target": "linux-amd64",
-      "file": "inventario-edumind_0.2.2_amd64.deb",
-      "bytes": 38691328,
-      "sha256": "93b287fe6171564e1e88519d3f8eff72ab7bdcf5053870e7efc515a83f8d052d"
+      "file": "inventario-edumind_0.2.3_amd64.deb",
+      "bytes": 38690268,
+      "sha256": "0f519832755caa831e91d875ada3f4336be7f1573b7d1040b13ac81dc164dd6a"
     },
     {
       "target": "linux-arm64",
-      "file": "inventario-edumind_0.2.2_arm64.deb",
-      "bytes": 38748504,
-      "sha256": "57b084a26afaf1fc5a1bacd0b4713e9c1f75fb8f2c6f07badb157cec90b5971c"
+      "file": "inventario-edumind_0.2.3_arm64.deb",
+      "bytes": 38773748,
+      "sha256": "bafd1e85780e13ecf78b1d64ac4102c505ce0546a62b94afeb9110b8e8b895fb"
     }
   ]
 }

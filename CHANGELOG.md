@@ -3,7 +3,7 @@
 Formato basado en [Keep a Changelog](https://keepachangelog.com/es/1.1.0/). Las versiones
 se refieren a los paquetes publicados en GitHub Releases.
 
-## [Sin publicar] — recuperación de acceso sin terminal (2026-11-03)
+## [0.2.3] — 2026-11-03
 - Pantalla de acceso: muestra el nombre del centro y el correo de administración
   parcialmente oculto (`l…a@live.com`) para saber con qué cuenta entrar.
 - Nuevo «He olvidado la contraseña» → `/recuperar`, visible solo desde el ordenador donde

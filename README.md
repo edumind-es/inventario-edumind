@@ -4,7 +4,7 @@
 los datos se guardan en el propio equipo del centro y **nunca salen de allí**. Sin cuentas en
 la nube, sin servicios online, sin App Store ni Play Store.
 
-> Versión actual: **0.2.2** · Software libre bajo doble licencia [AGPL-3.0-or-later](LICENSE-AGPL-3.0-or-later.txt) / [EUPL-1.2](LICENSE-EUPL-1.2.txt) · Autor: Luis Vilela Acuña · [Cambios](CHANGELOG.md) · [Decisiones](DECISIONES.md) · [Privacidad](PRIVACIDAD.md) · [Créditos](CREDITS.md)
+> Versión actual: **0.2.3** · Software libre bajo doble licencia [AGPL-3.0-or-later](LICENSE-AGPL-3.0-or-later.txt) / [EUPL-1.2](LICENSE-EUPL-1.2.txt) · Autor: Luis Vilela Acuña · [Cambios](CHANGELOG.md) · [Decisiones](DECISIONES.md) · [Privacidad](PRIVACIDAD.md) · [Créditos](CREDITS.md)
 
 ---
 
@@ -38,7 +38,7 @@ Instalación resumida:
 | 📱 **iOS / Android** | No descargan nada: se conectan por navegador al ordenador del centro (modo red) y «Añadir a pantalla de inicio». |
 
 **Verifica la integridad** con los códigos SHA-256 publicados en cada Release
-(`SHA256SUMS.txt`) antes de instalar. No se publican firmas GPG. La release 0.2.2 no incluye
+(`SHA256SUMS.txt`) antes de instalar. No se publican firmas GPG. La release 0.2.3 no incluye
 `.dmg` (se compila en un Mac; en macOS se usa el ZIP).
 
 > **Incidencia de los paquetes 0.2.0/0.2.1, corregida en 0.2.2:** les faltaban los módulos

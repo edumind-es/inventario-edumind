@@ -1,6 +1,6 @@
 {
   "name": "inventario-edumind",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Inventario local-first de recursos digitales para centros educativos",
   "type": "module",
   "private": true,

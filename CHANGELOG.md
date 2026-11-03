@@ -3,6 +3,16 @@
 Formato basado en [Keep a Changelog](https://keepachangelog.com/es/1.1.0/). Las versiones
 se refieren a los paquetes publicados en GitHub Releases.
 
+## [0.2.2] — 2026-11-03
+Primera versión compilada desde el fuente reconstruido en `app/` (DECISIONES.md, D13).
+- **Corregido:** error 500 en ficha de equipo, préstamo y devolución, etiquetas PDF, actas
+  PDF, importación CSV y pantalla *Sistema* (modo red). Los paquetes 0.2.0/0.2.1 no
+  incluían `qrcode`, `pdf-lib` ni `papaparse`; el nuevo empaquetado los comprueba.
+- Paquetes: 5 ZIP (Windows, macOS ×2, Linux ×2) con Node v22.23.1 y 2 `.deb` (amd64,
+  arm64) con versión real 0.2.2. Sin `.dmg` en esta release (se genera en un Mac).
+- Sin cambios funcionales ni de esquema respecto a 0.2.1: se actualiza sustituyendo la
+  carpeta de la app y los datos se conservan.
+
 ## [Sin publicar] — código fuente de la aplicación (2026-11-03)
 - Nuevo directorio `app/` con el proyecto SvelteKit completo, reconstruido a partir de los
   paquetes 0.2.x (ver DECISIONES.md, D13): servidor, pantallas, estilos, estáticos, scripts

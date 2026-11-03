@@ -4,7 +4,7 @@
 los datos se guardan en el propio equipo del centro y **nunca salen de allí**. Sin cuentas en
 la nube, sin servicios online, sin App Store ni Play Store.
 
-> Versión actual: **0.2.1** · Software libre bajo doble licencia [AGPL-3.0-or-later](LICENSE-AGPL-3.0-or-later.txt) / [EUPL-1.2](LICENSE-EUPL-1.2.txt) · Autor: Luis Vilela Acuña · [Cambios](CHANGELOG.md) · [Decisiones](DECISIONES.md) · [Privacidad](PRIVACIDAD.md) · [Créditos](CREDITS.md)
+> Versión actual: **0.2.2** · Software libre bajo doble licencia [AGPL-3.0-or-later](LICENSE-AGPL-3.0-or-later.txt) / [EUPL-1.2](LICENSE-EUPL-1.2.txt) · Autor: Luis Vilela Acuña · [Cambios](CHANGELOG.md) · [Decisiones](DECISIONES.md) · [Privacidad](PRIVACIDAD.md) · [Créditos](CREDITS.md)
 
 ---
 
@@ -32,21 +32,20 @@ Instalación resumida:
 
 | Sistema | Cómo |
 |---|---|
-| 🍎 **macOS** | Abre el `.dmg`, arrastra la app a Aplicaciones. La 1ª vez: clic derecho → «Abrir». |
+| 🍎 **macOS** | Descomprime el ZIP y arrastra `Inventario EDUmind.app` a Aplicaciones. La 1ª vez: clic derecho → «Abrir». |
 | 🪟 **Windows** | Descomprime el ZIP **completo** («Extraer todo») y haz doble clic en `Iniciar Inventario.vbs`. No hay instalador (`Setup.exe`). |
 | 🐧 **Linux / Abalar** | `sudo dpkg -i inventario-edumind_*.deb`, o descomprime el ZIP y ejecuta `iniciar-inventario.sh`. |
 | 📱 **iOS / Android** | No descargan nada: se conectan por navegador al ordenador del centro (modo red) y «Añadir a pantalla de inicio». |
 
 **Verifica la integridad** con los códigos SHA-256 publicados en cada Release
-(`SHA256SUMS.txt`) antes de instalar. No se publican firmas GPG. Los `.dmg` y `.deb` de la
-release 0.2.1 conservan el nombre 0.2.0 porque son las mismas compilaciones (solo cambió el
-ZIP de Windows).
+(`SHA256SUMS.txt`) antes de instalar. No se publican firmas GPG. La release 0.2.2 no incluye
+`.dmg` (se compila en un Mac; en macOS se usa el ZIP).
 
-> **Incidencia conocida en los paquetes 0.2.0/0.2.1** (detectada el 2026-09-25): a los cinco
-> paquetes les faltan los módulos `qrcode`, `pdf-lib` y `papaparse` en `node_modules/`, y por
-> eso la ficha de cada equipo, el préstamo, las etiquetas y actas en PDF, la importación CSV
-> y la pantalla *Sistema* (modo red) devuelven un error 500. Se corregirá en el próximo
-> empaquetado; mientras tanto, la app sirve para el alta y listado de equipos y usuarios.
+> **Incidencia de los paquetes 0.2.0/0.2.1, corregida en 0.2.2:** les faltaban los módulos
+> `qrcode`, `pdf-lib` y `papaparse` en `node_modules/`, y por eso la ficha de cada equipo, el
+> préstamo, las etiquetas y actas en PDF, la importación CSV y la pantalla *Sistema* (modo
+> red) devolvían un error 500. Actualiza sustituyendo la carpeta de la app: los datos se
+> conservan.
 
 ## Primer arranque
 

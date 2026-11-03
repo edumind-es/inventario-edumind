@@ -1,38 +1,38 @@
 {
   "name": "Inventario EDUmind",
-  "version": "0.2.1",
-  "date": "2026-09-11",
+  "version": "0.2.2",
+  "date": "2026-11-03",
   "node": "v22.23.1",
   "files": [
     {
       "target": "windows-x64",
       "file": "inventario-edumind-windows-x64.zip",
-      "bytes": 36711802,
-      "sha256": "bd48df11b096c427c8e9beba54aaed45a148e1dae6270adc715ceaef6d1f3061"
+      "bytes": 48680223,
+      "sha256": "7284763a32402d938e5a5e1d89cb4b686f5241b5a171090368ce6b318a888c8d"
     },
     {
       "target": "macos-arm64",
       "file": "inventario-edumind-macos-arm64.zip",
-      "bytes": 41015004,
-      "sha256": "d23c2e8e08f18f0da36314115a37d1d0363265b84c920d3bd4194cf7e18bd156"
+      "bytes": 52988540,
+      "sha256": "1f6f11e1ffd30697c16fc6e1674424e73c585958b7666b02934f62f4c43f04b8"
     },
     {
       "target": "macos-x64",
       "file": "inventario-edumind-macos-x64.zip",
-      "bytes": 42221662,
-      "sha256": "fc5855c7b77dba14539f8a6428c71c475a4c72541b2554910b2e1a0cffda16b8"
+      "bytes": 54152724,
+      "sha256": "d292938ae3d7eeda34d58e02bf80f4235b2f23ad016c1f3e59bd5f30d0da162a"
     },
     {
       "target": "linux-x64",
       "file": "inventario-edumind-linux-x64.zip",
-      "bytes": 47462174,
-      "sha256": "67af0228eb285b2fb866465a1eb57df77faac9c0fb89ab9868500f7762206d35"
+      "bytes": 59262926,
+      "sha256": "0b3b37d0e8efea12e79be730a12849ae38d3e73aee7ccbb731a38c8273403cad"
     },
     {
       "target": "linux-arm64",
       "file": "inventario-edumind-linux-arm64.zip",
-      "bytes": 47302592,
-      "sha256": "f16815f0191701ac5ee5f98c09e08e962d0a8faac5930d8d85eca2314dfec797"
+      "bytes": 59154758,
+      "sha256": "d74e157fbcb6b15a0cc78979a6ba878bfdaa4206346b690edab0e7aa1c2c94d9"
     }
   ]
 }

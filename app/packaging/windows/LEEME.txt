@@ -1,0 +1,20 @@
+Inventario EDUmind — windows-x64
+
+IMPORTANTE: extrae el ZIP antes de usarlo.
+En la ventana del ZIP pulsa "Extraer todo" y elige una carpeta normal
+(por ejemplo Documentos o el Escritorio). Si haces doble clic dentro del
+ZIP sin extraerlo, Windows copia un solo archivo a una carpeta temporal
+y el programa no arranca.
+
+Después, en la carpeta ya extraída, doble clic en "Iniciar Inventario.vbs"
+para arrancar (se abre el navegador, sin ventana negra). La primera vez
+Windows puede preguntar si confías en el archivo: elige "Más información" y
+luego "Ejecutar de todas formas".
+
+Arranca en modo local; para compartir con móviles/tablets, entra como
+administrador y ve a "Sistema" → "Activar modo red" (allí verás el código QR
+para los móviles).
+
+No hace falta instalar nada: Node va incluido en la carpeta runtime/.
+Los datos se guardan en la zona de datos del sistema (no en esta carpeta),
+así que al actualizar a una versión nueva NO se pierden.

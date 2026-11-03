@@ -1,0 +1,9 @@
+#!/bin/bash
+cd "$(dirname "$0")/../../.." || exit 1
+NODE="$(pwd)/runtime/bin/node"
+chmod +x "$NODE" 2>/dev/null
+DATA="$HOME/Library/Application Support/InventarioEDUmind"
+mkdir -p "$DATA"
+rm -f "$DATA/url.txt"
+( for i in $(seq 1 40); do if [ -f "$DATA/url.txt" ]; then open "$(cat "$DATA/url.txt")"; break; fi; sleep 0.5; done ) &
+exec "$NODE" --experimental-sqlite scripts/run.mjs

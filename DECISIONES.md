@@ -65,11 +65,26 @@ instalador sin firmar no aporta nada frente al ZIP y añade avisos de SmartScree
 renombrarlos mentiría. Se vuelven a subir a cada release para que todos los enlaces de
 la web funcionen.
 
-## D11. Este repositorio contiene la web de descargas y la documentación; el fuente se entrega bajo petición
-El código fuente de la app no está aún en el repositorio (Art. 13 AGPL: se entrega a quien
-lo pida). **Pendiente:** publicarlo aquí con instrucciones de compilación y empaquetado.
+## D11. El código fuente de la app vive en `app/` desde el 2026-11-03
+Hasta esa fecha el repositorio solo contenía la web de descargas y la documentación, y el
+fuente se entregaba bajo petición (Art. 13 AGPL). El fuente original no se conservó en
+ningún repositorio ni en el servidor (ver D13), así que `app/` es una reconstrucción.
 
 ## D12. Doble licencia AGPL-3.0-or-later OR EUPL-1.2 (2026-09-26)
 Se alinea con el resto de apps EDUmind: AGPL porque hay un componente servidor en red,
 EUPL como alternativa europea con validez jurídica en las lenguas oficiales de la UE. La
 marca EDUmind® queda fuera de la licencia (TRADEMARKS.md).
+
+## D13. Reconstrucción del fuente a partir de los paquetes compilados (2026-11-03)
+El proyecto SvelteKit original se compiló en un equipo ajeno al servidor y no se subió a
+ningún repositorio: solo existían los ZIP/.deb/.dmg de 0.2.x. Tras buscar sin éxito en el
+servidor, en GitHub (edumind-es y losmundosedufis), en las releases y en las transcripciones
+de sesiones de Claude, se reconstruyó `app/` desde el build: la parte servidor
+(`build/server/chunks`) es JavaScript legible y se pasó a TypeScript casi literal; las
+pantallas Svelte se reescribieron a partir del HTML de la salida SSR y de la lógica del
+cliente minificado. **Por qué:** sin fuente no se podían corregir los errores 500 de 0.2.x
+ni evolucionar la app. **Qué se conserva:** rutas, esquema SQLite (`user_version` 1),
+formato de QR `EDUMIND1|`, hash `scrypt$sal$hash`, cookie de sesión, zona de datos y los
+scripts `server.mjs`/`run.mjs`/`admin.mjs`, por lo que una instalación 0.2.x se actualiza
+sustituyendo la carpeta. **Lección:** `scripts/package.mjs` comprueba ahora que las
+dependencias de producción están en `node_modules/` antes de cerrar cada paquete.

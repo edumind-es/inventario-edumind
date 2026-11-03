@@ -3,6 +3,15 @@
 Formato basado en [Keep a Changelog](https://keepachangelog.com/es/1.1.0/). Las versiones
 se refieren a los paquetes publicados en GitHub Releases.
 
+## [Sin publicar] — código fuente de la aplicación (2026-11-03)
+- Nuevo directorio `app/` con el proyecto SvelteKit completo, reconstruido a partir de los
+  paquetes 0.2.x (ver DECISIONES.md, D13): servidor, pantallas, estilos, estáticos, scripts
+  de arranque y lanzadores de Windows, macOS y Linux (`app/packaging/`).
+- `app/scripts/package.mjs`: empaquetado reproducible (descarga Node verificado, `npm ci
+  --omit=dev`, ZIP por sistema, `.deb` opcional, `SHA256SUMS.txt`). Falla si faltan
+  `qrcode`, `pdf-lib`, `papaparse` o `selfsigned`, la causa del error 500 de 0.2.x.
+- Pendiente para 0.2.2: compilar y publicar los paquetes desde este fuente.
+
 ## [Sin publicar] — web de descargas y documentación (2026-09-26)
 Sin cambios en los paquetes de la aplicación (siguen siendo los de 0.2.1).
 - Web de descargas: instrucción correcta para Windows (no existe `Setup.exe`: se extrae el

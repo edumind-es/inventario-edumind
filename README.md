@@ -80,8 +80,9 @@ Política de IA de EDUmind: https://edumind.es/es/legal/ia
 
 ## Cómo modificarlo
 
-Este repositorio contiene la **web de descargas** (`web/`) y la **documentación**; la
-aplicación se distribuye compilada en los paquetes de Releases.
+Este repositorio contiene el **código fuente de la aplicación** (`app/`), la **web de
+descargas** (`web/`) y la **documentación**; la aplicación se distribuye compilada en los
+paquetes de Releases.
 
 - **Web de descargas:** `web/index.html` y `web/descargas.html` son HTML autocontenidos
   (CSS y JS en línea, sin dependencias). Para una versión nueva hay que actualizar a mano
@@ -89,8 +90,8 @@ aplicación se distribuye compilada en los paquetes de Releases.
   `DL` de `index.html`, la tabla de `descargas.html`, el `BASE` de los enlaces
   (`releases/download/vX.Y.Z/`) y este README. Se puede probar en local con
   `python3 -m http.server -d web`.
-- **Aplicación (SvelteKit + Node 22):** el código fuente completo se entrega a quien lo
-  solicite en `contacto@edumind.es` (Art. 13 AGPL) mientras no esté publicado aquí. Los
+- **Aplicación (SvelteKit + Node 22):** el fuente está en [`app/`](app/) (ver
+  [`app/README.md`](app/README.md) para desarrollo, compilación y empaquetado). Los
   paquetes llevan el servidor compilado en `build/`, los lanzadores en `scripts/`
   (`server.mjs`, `run.mjs`, `paths.mjs`, `admin.mjs`, con comentarios en español) y Node en
   `runtime/`. Se arranca con `runtime/bin/node --experimental-sqlite scripts/server.mjs`
@@ -110,8 +111,8 @@ El código es libre; la marca **EDUmind®** es propiedad de Luis Vilela Acuña y
 el código ([TRADEMARKS.md](TRADEMARKS.md)).
 
 > **Nota sobre el código fuente:** conforme al Art. 13 de la AGPL-3.0, el código fuente
-> completo correspondiente a la versión distribuida se ofrece a cualquier usuario que lo
-> solicite en `contacto@edumind.es`. Está pendiente publicarlo en este repositorio.
+> completo está publicado en [`app/`](app/). El de los paquetes 0.2.0/0.2.1 no se conservó;
+> `app/` es una reconstrucción equivalente a partir de ellos (DECISIONES.md, D13).
 
 ---
 

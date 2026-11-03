@@ -1,0 +1,7 @@
+nombre,email,identificador,rol
+Ana García,ana.garcia@centro.edu,12345678A,gestor
+Luis Pérez,luis.perez@centro.edu,,consulta
+Marta Docente,marta.docente@centro.edu,87654321B,gestor
+Aula 5º B,,AULA-5B,consulta
+Aula de Informática,,AULA-INF,consulta
+Dirección,direccion@centro.edu,,admin

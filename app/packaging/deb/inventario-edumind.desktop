@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Inventario EDUmind
+Comment=Inventario de recursos digitales del centro
+Exec=/opt/inventario-edumind/iniciar.sh
+Icon=/opt/inventario-edumind/icon.png
+Terminal=false
+Categories=Education;Utility;

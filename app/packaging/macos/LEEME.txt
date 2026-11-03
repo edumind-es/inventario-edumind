@@ -1,0 +1,9 @@
+Inventario EDUmind — macos-arm64
+
+Doble clic en "Inventario EDUmind.app" para arrancar (se abre el navegador, sin ventana negra).
+Arranca en modo local; para compartir con móviles/tablets, entra como administrador
+y ve a "Sistema" → "Activar modo red" (allí verás el código QR para los móviles).
+
+No hace falta instalar nada: Node va incluido en la carpeta runtime/.
+Los datos se guardan en la zona de datos del sistema (no en esta carpeta), así que
+al actualizar a una versión nueva NO se pierden.

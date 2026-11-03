@@ -4,7 +4,7 @@
 los datos se guardan en el propio equipo del centro y **nunca salen de allí**. Sin cuentas en
 la nube, sin servicios online, sin App Store ni Play Store.
 
-> Versión actual: **0.2.1** · Software libre bajo doble licencia [AGPL-3.0-or-later](LICENSE-AGPL-3.0-or-later.txt) / [EUPL-1.2](LICENSE-EUPL-1.2.txt) · Autor: Luis Vilela Acuña · [Cambios](CHANGELOG.md) · [Decisiones](DECISIONES.md) · [Privacidad](PRIVACIDAD.md) · [Créditos](CREDITS.md)
+> Versión actual: **0.2.2** · Software libre bajo doble licencia [AGPL-3.0-or-later](LICENSE-AGPL-3.0-or-later.txt) / [EUPL-1.2](LICENSE-EUPL-1.2.txt) · Autor: Luis Vilela Acuña · [Cambios](CHANGELOG.md) · [Decisiones](DECISIONES.md) · [Privacidad](PRIVACIDAD.md) · [Créditos](CREDITS.md)
 
 ---
 
@@ -32,21 +32,20 @@ Instalación resumida:
 
 | Sistema | Cómo |
 |---|---|
-| 🍎 **macOS** | Abre el `.dmg`, arrastra la app a Aplicaciones. La 1ª vez: clic derecho → «Abrir». |
+| 🍎 **macOS** | Descomprime el ZIP y arrastra `Inventario EDUmind.app` a Aplicaciones. La 1ª vez: clic derecho → «Abrir». |
 | 🪟 **Windows** | Descomprime el ZIP **completo** («Extraer todo») y haz doble clic en `Iniciar Inventario.vbs`. No hay instalador (`Setup.exe`). |
 | 🐧 **Linux / Abalar** | `sudo dpkg -i inventario-edumind_*.deb`, o descomprime el ZIP y ejecuta `iniciar-inventario.sh`. |
 | 📱 **iOS / Android** | No descargan nada: se conectan por navegador al ordenador del centro (modo red) y «Añadir a pantalla de inicio». |
 
 **Verifica la integridad** con los códigos SHA-256 publicados en cada Release
-(`SHA256SUMS.txt`) antes de instalar. No se publican firmas GPG. Los `.dmg` y `.deb` de la
-release 0.2.1 conservan el nombre 0.2.0 porque son las mismas compilaciones (solo cambió el
-ZIP de Windows).
+(`SHA256SUMS.txt`) antes de instalar. No se publican firmas GPG. La release 0.2.2 no incluye
+`.dmg` (se compila en un Mac; en macOS se usa el ZIP).
 
-> **Incidencia conocida en los paquetes 0.2.0/0.2.1** (detectada el 2026-09-25): a los cinco
-> paquetes les faltan los módulos `qrcode`, `pdf-lib` y `papaparse` en `node_modules/`, y por
-> eso la ficha de cada equipo, el préstamo, las etiquetas y actas en PDF, la importación CSV
-> y la pantalla *Sistema* (modo red) devuelven un error 500. Se corregirá en el próximo
-> empaquetado; mientras tanto, la app sirve para el alta y listado de equipos y usuarios.
+> **Incidencia de los paquetes 0.2.0/0.2.1, corregida en 0.2.2:** les faltaban los módulos
+> `qrcode`, `pdf-lib` y `papaparse` en `node_modules/`, y por eso la ficha de cada equipo, el
+> préstamo, las etiquetas y actas en PDF, la importación CSV y la pantalla *Sistema* (modo
+> red) devolvían un error 500. Actualiza sustituyendo la carpeta de la app: los datos se
+> conservan.
 
 ## Primer arranque
 
@@ -80,8 +79,9 @@ Política de IA de EDUmind: https://edumind.es/es/legal/ia
 
 ## Cómo modificarlo
 
-Este repositorio contiene la **web de descargas** (`web/`) y la **documentación**; la
-aplicación se distribuye compilada en los paquetes de Releases.
+Este repositorio contiene el **código fuente de la aplicación** (`app/`), la **web de
+descargas** (`web/`) y la **documentación**; la aplicación se distribuye compilada en los
+paquetes de Releases.
 
 - **Web de descargas:** `web/index.html` y `web/descargas.html` son HTML autocontenidos
   (CSS y JS en línea, sin dependencias). Para una versión nueva hay que actualizar a mano
@@ -89,8 +89,8 @@ aplicación se distribuye compilada en los paquetes de Releases.
   `DL` de `index.html`, la tabla de `descargas.html`, el `BASE` de los enlaces
   (`releases/download/vX.Y.Z/`) y este README. Se puede probar en local con
   `python3 -m http.server -d web`.
-- **Aplicación (SvelteKit + Node 22):** el código fuente completo se entrega a quien lo
-  solicite en `contacto@edumind.es` (Art. 13 AGPL) mientras no esté publicado aquí. Los
+- **Aplicación (SvelteKit + Node 22):** el fuente está en [`app/`](app/) (ver
+  [`app/README.md`](app/README.md) para desarrollo, compilación y empaquetado). Los
   paquetes llevan el servidor compilado en `build/`, los lanzadores en `scripts/`
   (`server.mjs`, `run.mjs`, `paths.mjs`, `admin.mjs`, con comentarios en español) y Node en
   `runtime/`. Se arranca con `runtime/bin/node --experimental-sqlite scripts/server.mjs`
@@ -110,8 +110,8 @@ El código es libre; la marca **EDUmind®** es propiedad de Luis Vilela Acuña y
 el código ([TRADEMARKS.md](TRADEMARKS.md)).
 
 > **Nota sobre el código fuente:** conforme al Art. 13 de la AGPL-3.0, el código fuente
-> completo correspondiente a la versión distribuida se ofrece a cualquier usuario que lo
-> solicite en `contacto@edumind.es`. Está pendiente publicarlo en este repositorio.
+> completo está publicado en [`app/`](app/). El de los paquetes 0.2.0/0.2.1 no se conservó;
+> `app/` es una reconstrucción equivalente a partir de ellos (DECISIONES.md, D13).
 
 ---
 

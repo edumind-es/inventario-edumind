@@ -235,6 +235,8 @@ function buildDeb(target) {
 
 	// Metadatos del paquete
 	mkdirSync(join(root, 'DEBIAN'), { recursive: true });
+	// dpkg-deb exige 0755 en DEBIAN; en /var/www las carpetas heredan setgid (2775).
+	chmodSync(join(root, 'DEBIAN'), 0o755);
 	const sizeKb = Math.ceil(dirSize(opt) / 1024);
 	writeFileSync(
 		join(root, 'DEBIAN', 'control'),

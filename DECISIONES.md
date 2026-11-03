@@ -88,3 +88,15 @@ formato de QR `EDUMIND1|`, hash `scrypt$sal$hash`, cookie de sesión, zona de da
 scripts `server.mjs`/`run.mjs`/`admin.mjs`, por lo que una instalación 0.2.x se actualiza
 sustituyendo la carpeta. **Lección:** `scripts/package.mjs` comprueba ahora que las
 dependencias de producción están en `node_modules/` antes de cerrar cada paquete.
+
+## D14. Recuperación de la contraseña de administración desde la app (2026-11-03)
+Hasta 0.2.2 la única recuperación era `scripts/admin.mjs` por terminal. Ahora la pantalla
+de acceso muestra el correo de administración parcialmente oculto y, solo cuando la
+petición llega desde el propio ordenador servidor (127.0.0.1), ofrece «He olvidado la
+contraseña»: la app escribe un código de un solo uso en `recuperacion.txt` dentro de la
+carpeta de datos, y quien lo lea puede fijar una contraseña nueva. **Por qué:** la garantía
+es la misma que la del terminal (acceso físico al equipo del centro, coherente con D1 y
+D5) y desaparece la barrera técnica para un docente. Desde la WiFi del centro el enlace no
+aparece y la ruta responde 403. El código se guarda hasheado (scrypt), caduca a los 10
+minutos, se anula a los 5 intentos y se destruye al usarse; al restablecer se cierran las
+sesiones abiertas de esa cuenta.

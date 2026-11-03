@@ -2,7 +2,7 @@ import { redirect, type Handle } from '@sveltejs/kit';
 import { getSessionUser, hasAnyAdmin } from '$lib/server/auth';
 
 /** Rutas accesibles sin sesión. */
-const PUBLIC_PREFIXES = ['/login', '/setup'];
+const PUBLIC_PREFIXES = ['/login', '/setup', '/recuperar'];
 
 export const handle: Handle = async ({ event, resolve }) => {
 	event.locals.user = getSessionUser(event.cookies);

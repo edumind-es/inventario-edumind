@@ -1,7 +1,7 @@
 <script lang="ts">
-	import type { ActionData } from './$types';
+	import type { PageData, ActionData } from './$types';
 
-	let { form }: { form: ActionData } = $props();
+	let { data, form }: { data: PageData; form: ActionData } = $props();
 </script>
 
 <svelte:head>
@@ -16,7 +16,8 @@
 			class="mx-auto mb-3 h-24 w-24 rounded-2xl object-contain shadow-sm ring-1 ring-slate-200"
 		/>
 		<h1 class="text-2xl font-bold text-slate-900">Inventario EDUmind</h1>
-		<p class="mt-1 text-slate-600">Inicia sesión para gestionar el inventario del centro.</p>
+		<p class="mt-1 text-slate-600">{data.centerName}</p>
+		<p class="text-sm text-slate-500">Inicia sesión para gestionar el inventario del centro.</p>
 	</div>
 
 	<form method="POST" class="card space-y-4 p-6">
@@ -34,6 +35,11 @@
 				required
 				value={form?.email ?? ''}
 			/>
+			{#if data.adminHints.length > 0}
+				<p class="mt-1 text-xs text-slate-500">
+					Administración: {data.adminHints.join(' · ')}
+				</p>
+			{/if}
 		</div>
 		<div>
 			<label class="label" for="password">Contraseña</label>
@@ -41,4 +47,14 @@
 		</div>
 		<button class="btn-primary w-full" type="submit">Entrar</button>
 	</form>
+
+	{#if data.canRecover}
+		<p class="mt-4 text-center text-sm text-slate-500">
+			<a href="/recuperar" class="font-medium text-brand-700 hover:underline">He olvidado la contraseña</a>
+		</p>
+	{:else}
+		<p class="mt-4 text-center text-xs text-slate-400">
+			¿Sin acceso? La contraseña se restablece desde el ordenador donde está instalada la aplicación.
+		</p>
+	{/if}
 </main>

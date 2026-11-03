@@ -14,6 +14,11 @@ ejecuta la app (el «servidor» del centro), fuera de la carpeta del programa:
 | Windows | `%APPDATA%\InventarioEDUmind\` |
 | macOS | `~/Library/Application Support/InventarioEDUmind/` |
 
+En esa misma carpeta pueden existir, además, el certificado autofirmado del modo red
+(`cert/`), el registro `server.log`, `mode.txt`, `url.txt` y, solo mientras dura una
+recuperación de contraseña (10 minutos como máximo), `recuperacion.txt` con un código de
+un solo uso; ninguno contiene datos personales.
+
 | Datos | Quién los introduce | Tabla |
 |---|---|---|
 | Nombre del centro, nombre, correo y contraseña de la persona administradora (scrypt + sal) | configuración inicial | `users`, `settings` |

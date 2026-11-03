@@ -54,6 +54,11 @@ A partir de ahí los datos se guardan en ese equipo y **no se pierden al actuali
 en modo local; para usarlo desde móviles/tablets, entra como administrador y activa el **modo
 red** en *Sistema*.
 
+**¿Contraseña olvidada?** En el ordenador donde está instalada la app, pulsa «He olvidado la
+contraseña» en la pantalla de acceso: la app deja un código en el fichero `recuperacion.txt`
+de su carpeta de datos y con él fijas una contraseña nueva. Desde otros equipos de la red ese
+enlace no aparece.
+
 ## Privacidad
 
 Local-first: nada sale del centro, sin analítica ni telemetría. Qué guarda la app, dónde,

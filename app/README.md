@@ -28,7 +28,9 @@ Variables útiles:
 | `PORT` | Puerto del servidor de producción (4600). |
 
 Primer arranque: la app pide crear la cuenta de administración en `/setup`. Si se olvida
-la contraseña: `npm run admin` (crea o restablece un administrador en la base de datos local).
+la contraseña: «He olvidado la contraseña» en `/login` (solo desde 127.0.0.1; deja un código
+en `recuperacion.txt` de la carpeta de datos, ver `src/lib/server/recovery.ts`) o, por
+terminal, `npm run admin`.
 
 ## Compilar y probar en producción
 

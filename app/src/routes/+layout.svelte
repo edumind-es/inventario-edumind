@@ -61,7 +61,7 @@
 	];
 
 	// Login y setup se muestran sin barra lateral.
-	const bare = $derived(['/login', '/setup'].some((p) => page.url.pathname.startsWith(p)));
+	const bare = $derived(['/login', '/setup', '/recuperar'].some((p) => page.url.pathname.startsWith(p)));
 	const items = $derived(NAV.filter((i) => roleAtLeast(data.user?.role, i.minRole)));
 	let menuOpen = $state(false);
 

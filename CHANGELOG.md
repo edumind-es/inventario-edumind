@@ -3,6 +3,15 @@
 Formato basado en [Keep a Changelog](https://keepachangelog.com/es/1.1.0/). Las versiones
 se refieren a los paquetes publicados en GitHub Releases.
 
+## [Sin publicar] — recuperación de acceso sin terminal (2026-11-03)
+- Pantalla de acceso: muestra el nombre del centro y el correo de administración
+  parcialmente oculto (`l…a@live.com`) para saber con qué cuenta entrar.
+- Nuevo «He olvidado la contraseña» → `/recuperar`, visible solo desde el ordenador donde
+  corre la aplicación (127.0.0.1). Escribe un código de un solo uso en `recuperacion.txt`
+  dentro de la carpeta de datos; con él se elige la cuenta de administración y se fija una
+  contraseña nueva. Caduca a los 10 minutos, se anula tras 5 fallos y se borra al usarse.
+  Sustituye al terminal (`scripts/admin.mjs`) en el caso habitual; el script sigue existiendo.
+
 ## [0.2.2] — 2026-11-03
 Primera versión compilada desde el fuente reconstruido en `app/` (DECISIONES.md, D13).
 - **Corregido:** error 500 en ficha de equipo, préstamo y devolución, etiquetas PDF, actas

@@ -1,6 +1,21 @@
 import { fail, redirect, type Actions } from '@sveltejs/kit';
-import { db } from '$lib/server/db';
+import type { PageServerLoad } from './$types';
+import { db, getSetting } from '$lib/server/db';
 import { verifyPassword, pruneSessions, createSession } from '$lib/server/auth';
+import { isLocalRequest, listAdmins } from '$lib/server/recovery';
+
+/**
+ * Pista para no quedarse fuera: nombre del centro y correo(s) de administración
+ * parcialmente ocultos. El enlace de recuperación solo se ofrece desde el propio
+ * ordenador servidor.
+ */
+export const load: PageServerLoad = async ({ getClientAddress }) => {
+	return {
+		centerName: getSetting('center_name', 'Centro Educativo'),
+		adminHints: listAdmins().map((a) => a.emailMasked),
+		canRecover: isLocalRequest(getClientAddress())
+	};
+};
 
 export const actions: Actions = {
 	default: async ({ request, cookies, url }) => {
